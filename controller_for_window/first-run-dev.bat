@@ -1,6 +1,6 @@
 cd ..
 cd docker-compose
-cd django-starter-kit-dev
+cd django_starter_kit_dev
 
 docker compose up -d
 
