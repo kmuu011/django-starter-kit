@@ -31,7 +31,6 @@ INSTALLED_APPS = [
 
 REST_FRAMEWORK = {
   'DEFAULT_AUTHENTICATION_CLASSES': [
-    'rest_framework.authentication.TokenAuthentication',
     'rest_framework.authentication.SessionAuthentication',
   ],
   'DEFAULT_PERMISSION_CLASSES': [
@@ -110,3 +109,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# 2) 세션 엔진을 캐시 기반으로 지정
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+# 사용할 캐시 alias 지정 (위 CACHES의 키)
+SESSION_CACHE_ALIAS = "default"
